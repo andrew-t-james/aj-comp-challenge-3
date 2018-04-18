@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/v4-shims.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>aj-comp-challenge-3</title>
+</head>
+<body>
+  <section class="wrapper">
+    <nav class="sidebar">
+      <header class="sidebar__user sidebar-box">
+        <img class="sidebar__user--image" src="./assets/images/user.png" alt="Admin User Image" aria-label="User Image">
+        <h2 class="sidebar__user--title" aria-label="User Name">Newton Barley
+          <i class="fas fa-chevron-down sidebar__user--icon" alt="Chevron Facing Down"></i>
+        </h2>
+      </header>
+      <ul class="sidebar-submenu-nav sidebar-box">
+        <p class="sidebar-submenu-nav__title">Main</p>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-home fa-fw sidebar-submenu-nav__icon" alt="Home Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Home</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-briefcase fa-fw sidebar-submenu-nav__icon" alt="Briefcase Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Jobs</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-file fa-fw sidebar-submenu-nav__icon" alt="File folder Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Resumes</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-clipboard fa-fw sidebar-submenu-nav__icon" alt="Clipboard Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Tasks</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-calendar-alt fa-fw sidebar-submenu-nav__icon" alt="Calender Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Calender</a>
+        </li>
+      </ul>
+      <ul class="sidebar-submenu-nav sidebar-box">
+        <p class="sidebar-submenu-nav__title">Main</p>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-users fa-fw sidebar-submenu-nav__icon" alt="Social Users Icons"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Users</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-map-marker-alt fa-fw sidebar-submenu-nav__icon" alt="Map Marker Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Location</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-sitemap fa-fw sidebar-submenu-nav__icon" alt="Sitemap Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Workflows</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-newspaper fa-fw sidebar-submenu-nav__icon" alt="Newspaper Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Job Boards</a>
+        </li>
+        <li class="sidebar-submenu-nav__item">
+          <i class="fas fa-share-alt fa-fw sidebar-submenu-nav__icon" alt="Share with Others Icon"></i>
+          <a href="#" class="sidebar-submenu-nav__item--link" role="link">Social</a>
+        </li>
+      </ul>
+      <ul class="sidebar-submenu-nav sidebar-box">
+        <p class="sidebar-submenu-nav__title control--heading">Categories</p>
+        <label class="control control--checkbox">Administrative
+          <input type="checkbox" checked="checked">
+          <span class="control__indicator" role="checkbox"></span>
+        </label>
+        <label class="control control--checkbox">Design
+          <input type="checkbox">
+          <span class="control__indicator" role="checkbox"></span>
+        </label>
+        <label class="control control--checkbox">Executive
+          <input type="checkbox">
+          <span class="control__indicator" role="checkbox"></span>
+        </label>
+        <label class="control control--checkbox">Human Resources
+          <input type="checkbox">
+          <span class="control__indicator" role="checkbox"></span>
+        </label>
+      </ul>
+    </nav>
+    <main class="main">
+      <section class="search-section">
+        <article class="search">
+          <span class="search-icon__box nav-toggle" role="link" aria-label="sidebar navigation toggle">
+            <i class="fas fa-bars search-icon__box--icon" alt="Hamburger Menu Icon"></i>
+          </span>
+          <input type="text" class="search-input" placeholder="Search for Job, Task, or Resume">
+          <span class="search-icon__box" role="link" aria-label="navigation to user profile">
+            <i class="fas fa-user search-icon__box--icon" alt="User Icon"></i>
+          </span>
+          <span class="search-icon__box" role="link" aria-label="navigation to user calender">
+            <i class="fas fa-calendar-alt search-icon__box--icon" alt="Calender Icon"></i>
+          </span>
+          <span class="search-icon__box" role="link" aria-label="navigation to user settings">
+            <i class="fas fa-th search-icon__box--icon" alt="User Settings Icon"></i>
+          </span>
+        </article>
+        <section class="info-section">
+          <header class="info-header">
+            <h1 class="info-header--heading">Customer Service Representative</h1>
+            <span class="info-header__location">
+              <p class="info-header__location--city">
+                <i class="fas fa-map-marker-alt" alt="Map Marker Icon"></i> San Francisco, CA &#8226;
+                <span class="info-header__location--post">
+                  <a href="#" role="link">Preview This post</a>
+                </span>
+              </p>
+            </span>
+          </header>
+          <nav class="info-nav">
+            <ul class="info-nav__list">
+              <li class="info-nav__list--item" role="link" aria-label="Job Status">
+                <i class="fas fa-circle" alt="Circle Icon"></i>Open</li>
+              <li class="info-nav__list--item" role="link" aria-label="Bookmark this Job">
+                <i class="fas fa-bookmark" alt="Bookmark Icon"></i>
+              </li>
+              <li class="info-nav__list--item" role="link" aria-label="Edit your information">
+                <i class="fas fa-pencil-alt" alt="Pencil Icon"></i>
+              </li>
+              <li class="info-nav__list--item" role="link" aria-label="Delete this listing from your saved jobs">
+                <i class="fas fa-trash-alt" alt="Trash Can Icon"></i>
+              </li>
+            </ul>
+          </nav>
+          <aside class="navigation-section">
+            <nav class="navigation">
+              <ul class="navigation__links">
+                <li class="navigation__links--link" role="link" aria-label="Job Summary">
+                  <a href="#">Summary</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Job Applications">
+                  <a href="#">Applications</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Job Boards">
+                  <a href="#">Job Boards</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Interviews section">
+                  <a href="#">Interviews</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Job Activity">
+                  <a href="#">Activity</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Job Broadcast">
+                  <a href="#">Broadcast</a>
+                </li>
+                <li class="navigation__links--link" role="link" aria-label="Job Notification">
+                  <a href="#">Notification</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </section>
+        <section class="chart-section">
+          <article class="circular-charts">
+            <svg aria-label="Circle Graph 3,154 Resumes" viewbox="0 0 36 36" class="circular-charts--chart green">
+              <path class="circle-background" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="80, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="17" class="amount">3,154</text>
+              <text x="11.5" y="22" class="small-text">Resumes</text>
+            </svg>
+            <svg aria-label="Circle Graph 1546 Interviews" viewbox="0 0 36 36" class="circular-charts--chart blue">
+              <path class="circle-background" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="55, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="17" class="amount">1,546</text>
+              <text x="10" y="22" class="small-text">Interviews</text>
+            </svg>
+            <svg aria-label="Circle Graph 912 Forwards" viewbox="0 0 36 36" class="circular-charts--chart purple">
+              <path class="circle-background" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="40, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="17" class="amount">912</text>
+              <text x="10.5" y="22" class="small-text">Forwards</text>
+            </svg>
+            <aside class="circular-charts__announcement">
+              <p class="circular-charts__announcement--text">TOTALS &#8226; Out of 5612 views</p>
+            </aside>
+          </article>
+          <article class="line-graph-container">
+            <canvas id="line-graph"></canvas>
+            <span class="line-graph__announcement">
+              <p class="line-graph__announcement--text">APPLICANTS/DAYS</p>
+            </span>
+          </article>
+        </section>
+        <section class="separator">
+          <article class="separator-foreground">
+            <i class="fas fa-angle-up" alt="Chevrons up Icon"></i>
+          </article>
+        </section>
+      </section>
+      <section class="job-section">
+        <section class="job-description">
+          <header class="job-description__header">
+            <h2 class="job-description__header--heading">Job Description</h2>
+            <button class="job-description__header--button">
+              <i class="fas fa-pencil-alt job-description--pencil" alt="Pencil Icon"></i>
+              Edit
+            </button>
+          </header>
+          <ul class="job-description__list">
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Position Title</h3>
+              <p class="job-description__list--copy">Customer Service Representative</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Location</h3>
+              <p class="job-description__list--copy">San Francisco, CA</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Employment Type</h3>
+              <p class="job-description__list--copy">Full-Time</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Experience</h3>
+              <p class="job-description__list--copy">Mid-level</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Status</h3>
+              <p class="job-description__list--copy">Open</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Description</h3>
+              <p class="job-description__list--copy">The Customer Service Representative is responsible for interacting with and providing quality assistance to
+                all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness
+                reduce customer service wait times while doing a backhand spring and eating a ham sandwich.</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Hiring Lead</h3>
+              <img class="job-description__list--image" src="./assets/images/user.png" alt="Admin User Image" alt="User Image">
+              <p class="job-description__list--copy">Tom Tizzy</p>
+            </li>
+            <li class="job-description__list--item">
+              <h3 class="job-description__list--heading">Approved Salary</h3>
+              <p class="job-description__list--copy salary">$58,000</p>
+            </li>
+          </ul>
+        </section>
+        <aside class="job-description-links">
+          <button class="job-description-links--button facebook">
+            <i class="fab fa-facebook-f" alt="Facebook Icon"></i>
+            <p class="job-description-links--copy">Post to Facebook</p>
+          </button>
+          <button class="job-description-links--button twitter">
+            <i class="fab fa-twitter" alt="Twitter Icon"></i>
+            <p class="job-description-links--copy">Tweet this Job</p>
+          </button>
+          <button class="job-description-links--button linkedin">
+            <i class="fab fa-linkedin" alt="LinkedIn Icon"></i>
+            <p class="job-description-links--copy">Post to LinkedIn</p>
+          </button>
+          <section class="share-section">
+            <article class="share-section__item">
+              <h3 class="share-section__item--header">
+                <i class="fas fa-globe" alt="Globe Icon"></i>
+                Link to this Job
+              </h3>
+              <p class="share-section__item--copy">
+                Lorem ipsum dolor sit amet, consectetur adipis cing elit. Integer mollis neque eget vestibpend.
+              </p>
+              <aside class="share-section__widget">
+                <p class="share-section__widget--link">https://www.loremipsum/ametconsecteturadipis.com</p>
+                <button class="share-section__widget--button">Copy</button>
+              </aside>
+            </article>
+            <article class="share-section__item">
+              <h3 class="share-section__item--header">
+                <i class="far fa-save" alt="Disk Icon"></i>
+                Use the Button Widget
+              </h3>
+              <p class="share-section__item--copy">
+                This widget embeds the buttons for sharing the job for submitting a resume on your website.
+              </p>
+              <aside class="share-section__widget">
+                <p class="share-section__widget--link">https://lwww.oremipsum/ametconsecteturadipis.com</p>
+                <button class="share-section__widget--button">Copy</button>
+              </aside>
+            </article>
+            <article class="share-section__item">
+              <h3 class="share-section__item--header">
+                <i class="far fa-paper-plane" alt="Paper Plane Icon"></i>
+                Link to this Job
+              </h3>
+              <p class="share-section__item--copy">
+                You can automatically upload multiple resumes to this job by emailing the address below.
+              </p>
+              <aside class="share-section__widget">
+                <p class="share-section__widget--email">youremail@mail.com</p>
+              </aside>
+            </article>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </section>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
