@@ -1,3 +1,5 @@
+/* BASIC RESET */
+
 *,
 *::after,
 *::before {
@@ -17,6 +19,8 @@ body {
   line-height: 1.6;
 }
 
+/* MAIN WRAPPER */
+
 .wrapper {
   display: flex;
 }
@@ -28,6 +32,8 @@ body {
   transition: 0.3s;
   width: 100vw;
 }
+
+/* SIDEBAR NAVIGATION */
 
 .sidebar {
   background-color: #374050;
@@ -124,6 +130,8 @@ body {
   margin-right: 1rem;
 }
 
+/* SIDEBAR CUSTOM CHECKBOX */
+
 .control {
   cursor: pointer;
   display: block;
@@ -173,13 +181,15 @@ body {
   background: #49A3F3;
 }
 
-.control input:checked ~ .control__indicator:after {
+.control input:checked + .control__indicator:after {
   display: block;
 }
 
 .control:hover {
   color: white;
 }
+
+/* SEARCH BAR */
 
 .search {
   background-color: #FFFFFF;
@@ -267,6 +277,8 @@ body {
     padding-left: 3rem;
   }
 }
+
+/* MAIN JOB INFO SECTION */
 
 .info-section {
   align-items: center;
@@ -385,6 +397,8 @@ body {
   }
 }
 
+/* NAVLINKS SECTION */
+
 .navigation-section {
   margin-top: 2rem;
   padding: 0 1.5rem;
@@ -440,6 +454,8 @@ body {
     padding-bottom: 1.3rem;
   }
 }
+
+/* CHART SECTION */
 
 .chart-section {
   background-color: #EDF2F6;
@@ -534,6 +550,8 @@ body {
   width: 95%;
 }
 
+/* CIRCLE CHART ANIMATIONS */
+
 @keyframes progress {
   0% {
     stroke-dasharray: 0 100;
@@ -587,6 +605,8 @@ body {
   }
 }
 
+/* VISUAL SEPARATOR */
+
 .separator {
   border-bottom: 2px solid #D2DAE2;
   display: block;
@@ -636,6 +656,8 @@ body {
   color: #7A8192;
   font-size: 2rem;
 }
+
+/* JOB DESCRIPTION SECTION */
 
 .job-section {
   display: flex;
@@ -787,6 +809,8 @@ body {
 .job-description-links--copy {
   width: 100%;
 }
+
+/* SHARE SECTION  */
 
 .share-section {
   order: -1;
